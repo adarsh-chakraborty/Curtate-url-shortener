@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Curtate - Url Shortener</title>
+    <nav class="navbar navbar-expand-lg navbar-dark nav__bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-1" href="#">
+              <img src="https://i.postimg.cc/sD8dWRfD/link.png" alt="Curtate" width="40" height="35">
+            Curtate
+
+          </a>
+          <span class="navbar-text me-auto mt-1">
+            A Quick Simple Url shortener.
+          </span>
+          
+          <span class="d-block  bg-dark text-white me-3" >
+            <a href="https://github.com/adarsh-chakraborty/Curtate-url-shortener" target="_blank" style="text-decoration: none;">
+              <span class="d-block p-2 text-white bg__block"> 
+                <img src="https://i.postimg.cc/gJLgsycm/Git-Logo-White.png" alt="Star on github" width="50" height="30" id="githublogo">
+                Fork or &starf; this project on github.
+              </span>
+            </a>
+           
+            </span>
+         <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Plans</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+           
+          </div> -->
+        </div>
+      </nav>
+
+
+      <style>
+         
+
+          .background{
+            
+            background: #121212;
+            height: 90vh;
+            
+            
+            
+            
+          }
+
+          .color-white{
+              color: floralwhite;
+          }
+
+          
+
+          .btn__submit{
+              color: white;
+          }
+
+          .btn__submit:hover{
+              background-color: darkslategray;
+          }
+
+          .half__width{
+              padding-left: 2.5rem;
+              padding-right: 2.5rem;
+              margin-top: 1rem;
+              width: 80vh;
+          }
+
+          .footer-link{
+            text-decoration: none;
+            color: inherit;
+          }
+
+          .footer-link:hover{
+            color: lavender;
+            
+          }
+
+          .bg__block{
+            border-radius: 10px;
+            background: #00000100;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+          }
+
+          .bg__block:hover{
+            background: rgba(255, 254, 254, 0);
+          }
+
+          .nav__bg-dark{
+            background: #121212;
+            
+          }
+
+          #githublogo{
+            margin-right: 0.5rem;
+          }
+
+          .copyBtn:hover{
+            transform: scale(1.2, 1.2);
+            transition: ease-in;
+            transition-duration: 1000;
+            
+          }
+       
+         
+          
+        
+      </style>
+  </head>
+  <body>
+    
+    <div class="d-flex flex-column justify-content-center align-items-center background" >
+      <div class="text-center">
+       <% if(result) { %> 
+        <div class="alert alert-dark m-4" role="alert">
+          <span class="lead">Your url has been shorten!</span> <br>
+          https://curtate.gq/<%= surl %> 
+          
+          <div class="d-inline" id="copyLink">
+            <svg class="copyBtn" width="25" height="24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+        </div>
+        <% } %> 
+          <h1 class="display-4 color-white">Welcome to Curtate!</h1>
+          <h2 class="color-white">A Quick Url Shortener - No Registration required!</h1>
+      </div>
+
+        
+            <div class="half__width">
+                <form action="/generate-link" method="POST">
+                    <div class="input-group">
+                        <input type="url" class="form-control" name="eurl" placeholder="Enter a url">
+                        <button class="btn btn-outline-secondary btn__submit mx-2" type="submit">Short</button>
+                      </div>
+
+                          
+                    
+                </form>
+                        
+                           
+                     
+
+                   
+                    
+                   
+               
+
+              <div class="form-text px-1">
+                Enter a long url, we will make it shorter for you in no time :)        
+              </div>
+              
+            </div>
+         
+           
+           
+          
+
+      
+
+            
+    </div>
+   
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container-fluid text-center">
+          <span class="text-muted">&copy; Curtate 2021. Made with &hearts; by <a href="https://github.com/adarsh-chakraborty" class="footer-link">Adarsh Chakraborty</a>.</span>
+      </div>
+  </footer>
+ 
+  <% if(result) {%> 
+  
+  <script>
+       var link= 'https://curtate.gq/<%- surl %>';
+      // Only Execute if the result is true.
+      const copyLink = document.getElementById('copyLink');
+      copyLink.addEventListener('click',()=> {
+        console.log(link);
+        var textArea = document.createElement("textarea");
+        textArea.value = link;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("Copy");
+        textArea.remove();
+         copyLink.innerHTML = "<svg class=\"copyBtn\" width=\"25\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path d=\"M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z\" /><path d=\"M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z\" /></svg>";
+    });
+      /*
+      //     function copy_password() {
+      //     var copyText = document.getElementById("pwd_spn");
+      //     var textArea = document.createElement("textarea");
+      //     textArea.value = copyText.textContent;
+      //     document.body.appendChild(textArea);
+      //     textArea.select();
+      //     document.execCommand("Copy");
+      //     textArea.remove();
+      // }
+
+      // <span id="pwd_spn" class="password-span">Test</span>
+      // <button id="cp_btn">Copy</button>
+      */
+ 
+    
+  </script>
+  <% } %> 
+  </body>
+</html>

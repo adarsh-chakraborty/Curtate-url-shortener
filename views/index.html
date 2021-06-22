@@ -9,23 +9,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <title>Curtate - Url Shortener</title>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark nav__bg-dark ">
         <div class="container-fluid">
             <a class="navbar-brand mt-1" href="#">
               <img src="https://i.postimg.cc/jqHjBrX4/cloud-computing.png" alt="Curtate" width="40" height="35">
             Curtate
+
           </a>
-          <span class="navbar-text oneliner ">
+          <span class="navbar-text me-auto mt-1">
             A Quick Simple Url shortener.
           </span>
           
-          <span class="d-block p-2 bg-dark text-white" >
+          <span class="d-block  bg-dark text-white me-3" >
             <span class="d-block p-2 text-white bg__block"> 
-                <img src="https://i.postimg.cc/gJLgsycm/Git-Logo-White.png" alt="Star on github" width="50" height="30">
+                <img src="https://i.postimg.cc/gJLgsycm/Git-Logo-White.png" alt="Star on github" width="50" height="30" id="githublogo">
                 Fork or &starf; this project on github.
               </span>
             </span>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+         <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
@@ -41,7 +42,7 @@
               </li>
             </ul>
            
-          </div>
+          </div> -->
         </div>
       </nav>
 
@@ -53,16 +54,17 @@
             
             background: #121212;
             height: 90vh;
+            
+            
+            
+            
           }
 
           .color-white{
               color: floralwhite;
           }
 
-          .centered{
-              
-              text-align: center;
-          }
+          
 
           .btn__submit{
               color: white;
@@ -90,20 +92,30 @@
           }
 
           .bg__block{
-            border-radius: 5px;
-            background: #00000094;
+            border-radius: 10px;
+            background: #00000100;
             color: white;
             padding: 20px;
             
           }
+
+          .nav__bg-dark{
+            background: #121212;
+          }
+
+          #githublogo{
+            margin-right: 0.5rem;
+          }
+       
          
           
         
       </style>
   </head>
   <body>
+    
     <div class="d-flex flex-column justify-content-center align-items-center background" >
-      <div class="centered">
+      <div class="text-center">
           <h1 class="display-4 color-white">Welcome to Curtate!</h1>
           <h2 class="color-white">A Quick Url Shortener - No Registration required!</h1>
       </div>
