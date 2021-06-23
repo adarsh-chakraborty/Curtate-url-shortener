@@ -10,8 +10,9 @@ app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(mainRoutes);
 
+const PORT = process.env.PORT || 3000;
 
 sequelize.sync().then(()=> {
-    app.listen(3000);
-    console.log("Server is live.");
+    app.listen(PORT);
+    console.log("Server is live on port: "+PORT);
 });
